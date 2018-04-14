@@ -37,7 +37,7 @@ namespace Bankarsko_rabotenje
 
 
             // TODO: This line of code loads data into the 'praksaDataSet.card_products' table. You can move, or remove it, as needed.
-            this.card_productsTableAdapter.Fill(this.praksaDataSet.card_products);
+            //this.card_productsTableAdapter.Fill(this.praksaDataSet.card_products);
             
             
             
