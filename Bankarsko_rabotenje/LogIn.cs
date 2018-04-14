@@ -23,12 +23,17 @@ namespace Bankarsko_rabotenje
         private void button1_Click(object sender, EventArgs e)
         {
             //Kreirame object of SqlConnection Class
-            SqlConnection kon = new SqlConnection(@"Data Source=MK_2010\IVANASQL;Initial Catalog=Praksa;Integrated Security=True");
-            kon.Open();
-            string userPwd = textBox2.Text;
-            string query1 = "select * from username_password1 where user_name = '" + textBox1.Text + "' ";
+            //SqlConnection db = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Praksa;Integrated Security=True");
+            
+            string connectionString = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+            SqlConnection db = new SqlConnection(connectionString);
+            db.Open();
+
+            string userPwd = "petar1"; // textBox2.Text;
+            string userName = "p.petrovski"; // textBox1.Text;
+            string query1 = "select * from username_password1 where user_name = '" + userName + "' ";
             string query2 = "select * from username_password1 where password = '" + userPwd + "' ";
-            SqlDataAdapter sda1 = new SqlDataAdapter(query1, kon);
+            SqlDataAdapter sda1 = new SqlDataAdapter(query1, db);
             DataTable dtUserName = new DataTable();
             sda1.Fill(dtUserName);
             
@@ -38,7 +43,7 @@ namespace Bankarsko_rabotenje
             }
             else
             {
-                SqlDataAdapter sda2 = new SqlDataAdapter(query2, kon);
+                SqlDataAdapter sda2 = new SqlDataAdapter(query2, db);
                 DataTable dtPwd = new DataTable();
                 sda2.Fill(dtPwd);
 
@@ -59,11 +64,10 @@ namespace Bankarsko_rabotenje
                     }
 
 
-                    string userName = textBox1.Text;
                     DateTime datum = DateTime.Now;
                     string format = "dd.MM.yyyy HH:mm:ss";
                     string query3 = "insert into LOGIN_LOG1(user_name, date_time) values (@username, @data)";
-                    SqlCommand cm = new SqlCommand(query3, kon);
+                    SqlCommand cm = new SqlCommand(query3, db);
                     cm.Parameters.AddWithValue("@username", userName);
                     cm.Parameters.AddWithValue("@data", datum);
                     try
@@ -71,7 +75,7 @@ namespace Bankarsko_rabotenje
                         cm.ExecuteNonQuery();
                         // kreirame Vraboten vo Memorija
                         string sqlGetUser = "select * from VRABOTEN1 where user_name = '" + userName + "' ";
-                        cm = new SqlCommand(sqlGetUser, kon);
+                        cm = new SqlCommand(sqlGetUser, db);
                         SqlDataAdapter sda = new SqlDataAdapter(cm);
                         DataTable dtUser = new DataTable();
                         sda.Fill(dtUser);
@@ -119,8 +123,8 @@ namespace Bankarsko_rabotenje
 
         //public void SetVraboten(string userName)
         //{
-        //    string konekcija = ConfigurationManager.ConnectionStrings["kon"].ConnectionString;
-        //    SqlConnection con = new SqlConnection(konekcija);
+        //    string dbekcija = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
+        //    SqlConnection con = new SqlConnection(dbekcija);
         //    DataTable Dt = new DataTable();
         //    try
         //    {
