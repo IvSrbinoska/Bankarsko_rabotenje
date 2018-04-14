@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PraksaDataSet2" targetNamespace="http://tempuri.org/PraksaDataSet2.xsd" xmlns:mstns="http://tempuri.org/PraksaDataSet2.xsd" xmlns="http://tempuri.org/PraksaDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PraksaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PraksaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Bankarsko_rabotenje.Properties.Settings.GlobalReference.Default.PraksaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="card_productsTableAdapter" GeneratorDataComponentClassName="card_productsTableAdapter" Name="card_products" UserDataComponentName="card_productsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PraksaConnectionString (Settings)" DbObjectName="Praksa.dbo.card_products" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT name_series FROM dbo.card_products</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="name_series" DataSetColumn="name_series" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PraksaDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PraksaDataSet2" msprop:Generator_UserDSName="PraksaDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="card_products" msprop:Generator_TableClassName="card_productsDataTable" msprop:Generator_TableVarName="tablecard_products" msprop:Generator_TablePropName="card_products" msprop:Generator_RowDeletingName="card_productsRowDeleting" msprop:Generator_RowChangingName="card_productsRowChanging" msprop:Generator_RowEvHandlerName="card_productsRowChangeEventHandler" msprop:Generator_RowDeletedName="card_productsRowDeleted" msprop:Generator_UserTableName="card_products" msprop:Generator_RowChangedName="card_productsRowChanged" msprop:Generator_RowEvArgName="card_productsRowChangeEvent" msprop:Generator_RowClassName="card_productsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name_series" msprop:Generator_ColumnVarNameInTable="columnname_series" msprop:Generator_ColumnPropNameInRow="name_series" msprop:Generator_ColumnPropNameInTable="name_seriesColumn" msprop:Generator_UserColumnName="name_series">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

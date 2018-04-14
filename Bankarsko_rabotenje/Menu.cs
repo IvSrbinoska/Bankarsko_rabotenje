@@ -92,5 +92,19 @@ namespace Bankarsko_rabotenje
         {
 
         }
+
+        private void menuKarticki_Edit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EditorKarticki ek = new EditorKarticki();
+            ek.Show();
+        }
+
+        private void menuKarticki_Pregled_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PregledKarticki pk = new PregledKarticki();
+            pk.Show();
+        }
     }
 }

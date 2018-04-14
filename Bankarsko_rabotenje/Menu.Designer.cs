@@ -30,12 +30,12 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuKarticki = new System.Windows.Forms.ToolStripMenuItem();
-            this.transakciiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuObrabotka_Presmetka = new System.Windows.Forms.ToolStripMenuItem();
             this.menuKarticki_Edit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuKarticki_Pregled = new System.Windows.Forms.ToolStripMenuItem();
+            this.transakciiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuTransakcii_Pregled = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuTransakcii_Vnes = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuObrabotka_Presmetka = new System.Windows.Forms.ToolStripMenuItem();
             this.presmetkaNaProvizijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,20 @@
             this.menuKarticki.Text = "Karticki";
             this.menuKarticki.Click += new System.EventHandler(this.kartickiToolStripMenuItem_Click);
             // 
+            // menuKarticki_Edit
+            // 
+            this.menuKarticki_Edit.Name = "menuKarticki_Edit";
+            this.menuKarticki_Edit.Size = new System.Drawing.Size(218, 22);
+            this.menuKarticki_Edit.Text = "edit type/products";
+            this.menuKarticki_Edit.Click += new System.EventHandler(this.menuKarticki_Edit_Click);
+            // 
+            // menuKarticki_Pregled
+            // 
+            this.menuKarticki_Pregled.Name = "menuKarticki_Pregled";
+            this.menuKarticki_Pregled.Size = new System.Drawing.Size(218, 22);
+            this.menuKarticki_Pregled.Text = "Pregled na izdadeni karticki";
+            this.menuKarticki_Pregled.Click += new System.EventHandler(this.menuKarticki_Pregled_Click);
+            // 
             // transakciiToolStripMenuItem
             // 
             this.transakciiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -71,27 +85,6 @@
             this.transakciiToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.transakciiToolStripMenuItem.Text = "Transakcii";
             this.transakciiToolStripMenuItem.Click += new System.EventHandler(this.transakciiToolStripMenuItem_Click);
-            // 
-            // MenuObrabotka_Presmetka
-            // 
-            this.MenuObrabotka_Presmetka.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.presmetkaNaProvizijaToolStripMenuItem});
-            this.MenuObrabotka_Presmetka.Name = "MenuObrabotka_Presmetka";
-            this.MenuObrabotka_Presmetka.Size = new System.Drawing.Size(75, 20);
-            this.MenuObrabotka_Presmetka.Text = "Obrabotka";
-            this.MenuObrabotka_Presmetka.Click += new System.EventHandler(this.obrabotkaToolStripMenuItem_Click);
-            // 
-            // menuKarticki_Edit
-            // 
-            this.menuKarticki_Edit.Name = "menuKarticki_Edit";
-            this.menuKarticki_Edit.Size = new System.Drawing.Size(218, 22);
-            this.menuKarticki_Edit.Text = "edit type/products";
-            // 
-            // menuKarticki_Pregled
-            // 
-            this.menuKarticki_Pregled.Name = "menuKarticki_Pregled";
-            this.menuKarticki_Pregled.Size = new System.Drawing.Size(218, 22);
-            this.menuKarticki_Pregled.Text = "Pregled na izdadeni karticki";
             // 
             // MenuTransakcii_Pregled
             // 
@@ -105,6 +98,15 @@
             this.MenuTransakcii_Vnes.Name = "MenuTransakcii_Vnes";
             this.MenuTransakcii_Vnes.Size = new System.Drawing.Size(191, 22);
             this.MenuTransakcii_Vnes.Text = "Vnes/storno transakcii";
+            // 
+            // MenuObrabotka_Presmetka
+            // 
+            this.MenuObrabotka_Presmetka.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.presmetkaNaProvizijaToolStripMenuItem});
+            this.MenuObrabotka_Presmetka.Name = "MenuObrabotka_Presmetka";
+            this.MenuObrabotka_Presmetka.Size = new System.Drawing.Size(75, 20);
+            this.MenuObrabotka_Presmetka.Text = "Obrabotka";
+            this.MenuObrabotka_Presmetka.Click += new System.EventHandler(this.obrabotkaToolStripMenuItem_Click);
             // 
             // presmetkaNaProvizijaToolStripMenuItem
             // 

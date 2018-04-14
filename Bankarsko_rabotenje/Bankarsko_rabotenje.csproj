@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditorKarticki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditorKarticki.Designer.cs">
+      <DependentUpon>EditorKarticki.cs</DependentUpon>
+    </Compile>
     <Compile Include="Karticki.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,9 +85,38 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="PraksaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PraksaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PraksaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PraksaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PraksaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PraksaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PraksaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PraksaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PregledKarticki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PregledKarticki.Designer.cs">
+      <DependentUpon>PregledKarticki.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Banka_classes\Vraboten.cs" />
+    <EmbeddedResource Include="EditorKarticki.resx">
+      <DependentUpon>EditorKarticki.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Karticki.resx">
       <DependentUpon>Karticki.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PregledKarticki.resx">
+      <DependentUpon>PregledKarticki.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,6 +138,50 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="PraksaDataSet.xsc">
+      <DependentUpon>PraksaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PraksaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PraksaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PraksaDataSet.xss">
+      <DependentUpon>PraksaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PraksaDataSet1.xsc">
+      <DependentUpon>PraksaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PraksaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PraksaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PraksaDataSet1.xss">
+      <DependentUpon>PraksaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PraksaDataSet2.xsc">
+      <DependentUpon>PraksaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PraksaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PraksaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PraksaDataSet2.xss">
+      <DependentUpon>PraksaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PraksaDataSet3.xsc">
+      <DependentUpon>PraksaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PraksaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PraksaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PraksaDataSet3.xss">
+      <DependentUpon>PraksaDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
