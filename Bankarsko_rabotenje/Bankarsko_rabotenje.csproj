@@ -97,6 +97,12 @@
     <Compile Include="NovaTransakcija.Designer.cs">
       <DependentUpon>NovaTransakcija.cs</DependentUpon>
     </Compile>
+    <Compile Include="Obrabotka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obrabotka.Designer.cs">
+      <DependentUpon>Obrabotka.cs</DependentUpon>
+    </Compile>
     <Compile Include="PraksaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NovaTransakcija.resx">
       <DependentUpon>NovaTransakcija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obrabotka.resx">
+      <DependentUpon>Obrabotka.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PregledKarticki.resx">
       <DependentUpon>PregledKarticki.cs</DependentUpon>
