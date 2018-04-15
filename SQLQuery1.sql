@@ -10,7 +10,8 @@
 DECLARE @datum DATE
 SET @datum='2018-04-23'
 
-SELECT MONTH(@datum)
+SELECT MONTH(DATEADD(month, -1, @datum))
+
 
 SELECT a.*,b.*
 FROM dbo.card_products a INNER JOIN dbo.cards_issued b ON a.IDProduct=b.IDProduct
