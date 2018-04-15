@@ -38,7 +38,7 @@ namespace Bankarsko_rabotenje
             DataTable data = new DataTable();
             try
             {
-                cmd = new SqlCommand("sp_Obrabotka",db);
+                cmd = new SqlCommand("sp_Obrabotka", db);
                 cmd.Parameters.Add(new SqlParameter("@datum", datum));
                 cmd.CommandType = CommandType.StoredProcedure;
                 sqlAdapter.SelectCommand = cmd;
@@ -49,8 +49,10 @@ namespace Bankarsko_rabotenje
             {
                 MessageBox.Show("Greska!  -  " + ex.Message);
             }
-            finally{
+            finally
+            {
                 db.Close();
             }
+        }
     }
 }
