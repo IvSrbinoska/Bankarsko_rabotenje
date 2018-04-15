@@ -90,21 +90,65 @@ namespace Bankarsko_rabotenje
 
         private void pregledTransakciiToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.IsMdiContainer = true;
+            this.MaximizeBox = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
+            PregledTransakcii pregled = new PregledTransakcii();
+            pregled.MdiParent = this;
+            pregled.MaximizeBox = true;
+            pregled.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            pregled.Show();
 
         }
 
         private void menuKarticki_Edit_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
+            //EditorKarticki ek = new EditorKarticki();
+            //ek.Show();
+
+            this.IsMdiContainer = true;
             EditorKarticki ek = new EditorKarticki();
+            this.MaximizeBox = true;
+            ek.MdiParent = this;
+            ek.MaximizeBox = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ek.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
             ek.Show();
         }
 
         private void menuKarticki_Pregled_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
+            //PregledKarticki pk = new PregledKarticki();
+            //pk.Show();
+
+            this.IsMdiContainer = true;
             PregledKarticki pk = new PregledKarticki();
+            this.MaximizeBox = true;
+            pk.MdiParent = this;
+
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            pk.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
+            pk.MdiParent = this;
             pk.Show();
+
+        }
+
+        private void MenuTransakcii_Vnes_Click(object sender, EventArgs e)
+        {
+            this.IsMdiContainer = true;
+            this.MaximizeBox = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
+            StornoTransakcii forma = new StornoTransakcii();
+            forma.MdiParent = this;
+            forma.MaximizeBox = true;
+            forma.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            forma.Show();
         }
     }
 }
