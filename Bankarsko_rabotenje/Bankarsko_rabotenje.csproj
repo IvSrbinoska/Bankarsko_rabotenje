@@ -262,5 +262,10 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQLQuery1.sql" />
+    <Content Include="zadaca_5.sql" />
+    <Content Include="zadaca_5_storedProc.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
